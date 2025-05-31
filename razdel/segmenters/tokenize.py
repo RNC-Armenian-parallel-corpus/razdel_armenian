@@ -26,7 +26,9 @@ from .punct import (
     QUOTES,
     BRACKETS,
 
-    SMILES
+    SMILES,
+    
+    EMPHASIS
 )
 
 
@@ -36,12 +38,13 @@ INT = 'INT'
 PUNCT = 'PUNCT'
 OTHER = 'OTHER'
 
-PUNCTS = '\\/!#$%&*+,.:;<=>?@^_`|~№…' + DASHES + QUOTES + BRACKETS
+PUNCTS = '\\/!#$%&*+,.:;<=>?@^_`|~№…։՟' + DASHES + QUOTES + BRACKETS + ' '
 
 ATOM = re.compile(
     r'''
     (?P<RU>[а-яё]+)
     |(?P<LAT>[a-z]+)
+    |(?P<ARM>[ա-և]+)
     |(?P<INT>\d+)
     |(?P<PUNCT>[%s])
     |(?P<OTHER>\S)
@@ -292,8 +295,8 @@ RULES = [
 
 
 class TokenSegmenter(Segmenter):
-    def __init__(self, split=TokenSplitter(), rules=RULES):
-        super(TokenSegmenter, self).__init__(split, rules)
+    def __init__(self):
+        super(TokenSegmenter, self).__init__(TokenSplitter(), RULES)
 
     def segment(self, parts):
         buffer = safe_next(parts)
