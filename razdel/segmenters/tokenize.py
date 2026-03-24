@@ -36,7 +36,7 @@ INT = 'INT'
 PUNCT = 'PUNCT'
 OTHER = 'OTHER'
 
-PUNCTS = '\\/!#$%&*+,.:;<=>?@^_`|~№…։՟' + DASHES + QUOTES + BRACKETS + ' '
+PUNCTS = '\\/!#$%&*+,.:;<=>?@^_`|~№…։՝՟' + DASHES + QUOTES + BRACKETS + ' '
 
 ATOM = re.compile(
     r'''
