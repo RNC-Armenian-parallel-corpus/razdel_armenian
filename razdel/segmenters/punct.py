@@ -1,8 +1,7 @@
 
 
-ENDINGS = '.?!…՞՜․'
-DASHES = '‑–—−-֊'
-EMPHASIS = '՛'
+ENDINGS = '.?!…․'
+DASHES = '‑–—−-֊՞՜՛'
 
 OPEN_QUOTES = '«“‘'
 CLOSE_QUOTES = '»”’'
