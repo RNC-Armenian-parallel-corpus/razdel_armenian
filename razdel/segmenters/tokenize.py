@@ -26,9 +26,7 @@ from .punct import (
     QUOTES,
     BRACKETS,
 
-    SMILES,
-    
-    EMPHASIS
+    SMILES
 )
 
 
